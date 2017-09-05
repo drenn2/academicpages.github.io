@@ -6,7 +6,8 @@ redirect_from:
   - /resume
 ---
 
-[Download CV (pdf)](https://drenn2.github.io/home/files/renn-cv.pdf)
+[Download CV (pdf)](https://drenn2.github.io/home/files/renn-cv.pdf)  
+  
 <!--
 Education
 ======
