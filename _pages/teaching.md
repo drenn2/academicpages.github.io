@@ -17,7 +17,7 @@
 ### University of Denver  
 - Authoritarian Regimes 
 - Consequences of Civil War (_scheduled_)
-- Causes of Civil War (_scheduled_, ([syllabus](https://drenn2.github.io/home/files/syllabus-causescs-fall2017.pdf)))
+- Causes of Civil War (_scheduled_, [syllabus](https://drenn2.github.io/home/files/syllabus-causescs-fall2017.pdf))
 - Defense Security Quantitative Analysis (_scheduled_, Graduate Level)
 - Defense Security Methods (Graduate Level, [syllabus](https://drenn2.github.io/home/files/syllabus-dsm-fall2017-html.html), [sample exercise](https://drenn2.github.io/home/files/1-data-management-venezuela.html))
 
