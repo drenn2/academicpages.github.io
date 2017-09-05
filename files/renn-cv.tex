@@ -1,0 +1,580 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% Simple LaTeX CV Template %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% NOTE: If you find that it says                                     %%
+%%                                                                    %%
+%%                           1 of ??                                  %%
+%%                                                                    %%
+%% at the bottom of your first page, this means that the AUX file     %%
+%% was not available when you ran LaTeX on this source. Simply RERUN  %%
+%% LaTeX to get the ``??'' replaced with the number of the last page  %%
+%% of the document. The AUX file will be generated on the first run   %%
+%% of LaTeX and used on the second run to fill in all of the          %%
+%% references.                                                        %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Don't like 10pt? Try 11pt or 12pt
+\documentclass[11pt]{article}
+
+% The automated optical recognition software used to digitize resume
+% information works best with fonts that do not have serifs. This
+% command uses a sans serif font throughout. Uncomment both lines (or at
+% least the second) to restore a Roman font (i.e., a font with serifs).
+%\usepackage{times}
+%\renewcommand{\familydefault}{\sfdefault}
+
+% This is a helpful package that puts math inside length specifications
+\usepackage{calc}
+\usepackage{comment}
+
+% for special characters
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern} % load a font with all the characters
+
+% Simpler bibsection for CV sections
+% (thanks to natbib for inspiration)
+\makeatletter
+\newlength{\bibhang}
+\setlength{\bibhang}{1em} %1em}
+\newlength{\bibsep}
+ {\@listi \global\bibsep\itemsep \global\advance\bibsep by\parsep}
+\newenvironment{bibsection}%
+        {\begin{enumerate}{}{%
+%        {\begin{list}{}{%
+       \setlength{\leftmargin}{\bibhang}%
+       \setlength{\itemindent}{-\leftmargin}%
+       \setlength{\itemsep}{\bibsep}%
+       \setlength{\parsep}{\z@}%
+        \setlength{\partopsep}{0pt}%
+        \setlength{\topsep}{0pt}}}
+        {\end{enumerate}\vspace{-.6\baselineskip}}
+%        {\end{list}\vspace{-.6\baselineskip}}
+\makeatother
+
+% Layout: Puts the section titles on left side of page
+\reversemarginpar
+
+%
+%         PAPER SIZE, PAGE NUMBER, AND DOCUMENT LAYOUT NOTES:
+%
+% The next \usepackage line changes the layout for CV style section
+% headings as marginal notes. It also sets up the paper size as either
+% letter or A4. By default, letter was used. If A4 paper is desired,
+% comment out the letterpaper lines and uncomment the a4paper lines.
+%
+% As you can see, the margin widths and section title widths can be
+% easily adjusted.
+%
+% ALSO: Notice that the includefoot option can be commented OUT in order
+% to put the PAGE NUMBER *IN* the bottom margin. This will make the
+% effective text area larger.
+%
+% IF YOU WISH TO REMOVE THE ``of LASTPAGE'' next to each page number,
+% see the note about the +LP and -LP lines below. Comment out the +LP
+% and uncomment the -LP.
+%
+% IF YOU WISH TO REMOVE PAGE NUMBERS, be sure that the includefoot line
+% is uncommented and ALSO uncomment the \pagestyle{empty} a few lines
+% below.
+%
+
+%% Use these lines for letter-sized paper
+\usepackage[paper=letterpaper,
+            %includefoot, % Uncomment to put page number above margin
+            marginparwidth=1.2in,     % Length of section titles
+            marginparsep=.05in,       % Space between titles and text
+            margin=1in,               % 1 inch margins
+            includemp]{geometry}
+
+%% Use these lines for A4-sized paper
+%\usepackage[paper=a4paper,
+%            %includefoot, % Uncomment to put page number above margin
+%            marginparwidth=30.5mm,    % Length of section titles
+%            marginparsep=1.5mm,       % Space between titles and text
+%            margin=25mm,              % 25mm margins
+%            includemp]{geometry}
+
+%% More layout: Get rid of indenting throughout entire document
+\setlength{\parindent}{0in}
+
+\usepackage[shortlabels]{enumitem}
+
+%% Reference the last page in the page number
+%
+% NOTE: comment the +LP line and uncomment the -LP line to have page
+%       numbers without the ``of ##'' last page reference)
+%
+% NOTE: uncomment the \pagestyle{empty} line to get rid of all page
+%       numbers (make sure includefoot is commented out above)
+%
+\usepackage{fancyhdr,lastpage}
+\pagestyle{fancy}
+%\pagestyle{empty}      % Uncomment this to get rid of page numbers
+\fancyhf{}\renewcommand{\headrulewidth}{0pt}
+\fancyfootoffset{\marginparsep+\marginparwidth}
+\newlength{\footpageshift}
+\setlength{\footpageshift}
+          {0.5\textwidth+0.5\marginparsep+0.5\marginparwidth-2in}
+\lfoot{\hspace{\footpageshift}%
+       \parbox{4in}{\, \hfill %
+                    \arabic{page} of \protect\pageref*{LastPage} % +LP
+%                    \arabic{page}                               % -LP
+                    \hfill \,}}
+
+% Finally, give us PDF bookmarks
+\usepackage{color,hyperref}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=darkblue,urlcolor=darkblue,
+            anchorcolor=darkblue,citecolor=darkblue}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Document Setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% The title (name) with a horizontal rule under it
+% (optional argument typesets an object right-justified across from name
+%  as well)
+%
+% Usage: \makeheading{name}
+%        OR
+%        \makeheading[right_object]{name}
+%
+% Place at top of document. It should be the first thing.
+% If ``right_object'' is provided in the square-braced optional
+% argument, it will be right justified on the same line as ``name'' at
+% the top of the CV. For example:
+%
+%       \makeheading[\emph{Curriculum vitae}]{Your Name}
+%
+% will put an emphasized ``Curriculum vitae'' at the top of the document
+% as a title. Likewise, a picture could be included:
+%
+%   \makeheading[\includegraphics[height=1.5in]{my_picutre}]{Your Name}
+%
+% the picture will be flush right across from the name.
+\newcommand{\makeheading}[2][]%
+        {\hspace*{-\marginparsep minus \marginparwidth}%
+         \begin{minipage}[t]{\textwidth+\marginparwidth+\marginparsep}%
+             {\large \bfseries #2 \hfill #1}\\[-0.15\baselineskip]%
+                 \rule{\columnwidth}{1pt}%
+         \end{minipage}}
+
+% The section headings
+%
+% Usage: \section{section name}
+\renewcommand{\section}[1]{\pagebreak[3]%
+    \hyphenpenalty=10000%
+    \vspace{1.3\baselineskip}%
+    \phantomsection\addcontentsline{toc}{section}{#1}%
+    \noindent\llap{\scshape\smash{\parbox[t]{\marginparwidth}{\raggedright #1}}}%
+    \vspace{-\baselineskip}\par}
+
+% An itemize-style list with lots of space between items
+\newenvironment{outerlist}[1][\enskip\textbullet]%
+        {\begin{itemize}[#1,leftmargin=*]}{\end{itemize}%
+         \vspace{-.6\baselineskip}}
+
+% An environment IDENTICAL to outerlist that has better pre-list spacing
+% when used as the first thing in a \section
+\newenvironment{lonelist}[1][\enskip\textbullet]%
+        {\begin{list}{#1}{%
+        \setlength{\partopsep}{0pt}%
+        \setlength{\topsep}{0pt}}}
+        {\end{list}\vspace{-.6\baselineskip}}
+
+% An itemize-style list with little space between items
+\newenvironment{innerlist}[1][\enskip\textbullet]%
+        {\begin{itemize}[#1,leftmargin=*,parsep=0pt,itemsep=0pt,topsep=0pt,partopsep=0pt]}
+        {\end{itemize}}
+
+% An environment IDENTICAL to innerlist that has better pre-list spacing
+% when used as the first thing in a \section
+\newenvironment{loneinnerlist}[1][\enskip\textbullet]%
+        {\begin{itemize}[#1,leftmargin=*,parsep=0pt,itemsep=0pt,topsep=0pt,partopsep=0pt]}
+        {\end{itemize}\vspace{-.6\baselineskip}}
+
+% To add some paragraph space between lines.
+% This also tells LaTeX to preferably break a page on one of these gaps
+% if there is a needed pagebreak nearby.
+\newcommand{\blankline}{\quad\pagebreak[3]}
+\newcommand{\halfblankline}{\quad\vspace{-0.5\baselineskip}\pagebreak[3]}
+
+% Uses hyperref to link DOI
+\newcommand\doilink[1]{\href{http://dx.doi.org/#1}{#1}}
+\newcommand\doi[1]{doi:\doilink{#1}}
+
+% For \url{SOME_URL}, links SOME_URL to the url SOME_URL
+\providecommand*\url[1]{\href{#1}{#1}}
+% Same as above, but pretty-prints SOME_URL in teletype fixed-width font
+\renewcommand*\url[1]{\href{#1}{\texttt{#1}}}
+
+% For \email{ADDRESS}, links ADDRESS to the url mailto:ADDRESS
+\providecommand*\email[1]{\href{mailto:#1}{#1}}
+% Same as above, but pretty-prints ADDRESS in teletype fixed-width font
+%\renewcommand*\email[1]{\href{mailto:#1}{\texttt{#1}}}
+
+%\providecommand\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+%    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+%\providecommand\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+%    \TeX}}
+\providecommand\BibTeX{{B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    \TeX}}
+\providecommand\Matlab{\textsc{Matlab}}
+
+%%%%%%%%%%%%%%%%%%%%%%%% End Helper Commands %%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Begin CV Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\makeheading{Duu (Jason) Renn \hfill August 2017}
+
+\section{Contact Information}
+
+% NOTE: Mind where the & separators and \\ breaks are in the following
+%       table.
+%
+% ALSO: \rcollength is the width of the right column of the table
+%       (adjust it to your liking; default is 1.85in).
+%
+\newlength{\rcollength}\setlength{\rcollength}{1.4in}%
+%
+\begin{tabular}[t]{@{}p{\textwidth-\rcollength}p{\rcollength}}
+%\href{http://www.cse.osu.edu/}%
+%     {Department of Computer Science and Engineering} & \\
+%\href{http://www.osu.edu/}{The Ohio State University}
+2124 Sie International Relations Complex\\
+Josef Korbel School of International Studies\\
+University of Denver\\
+2201 South Gaylord Street\\
+Denver, CO 80208 \\
+
+\vspace{2mm}
+
+Phone: 217-550-1826 \\
+Email: \email{jason.renn@gmail.com}\\
+% Website: (under construction)
+
+Born: September 22, 1988 (Louisville, KY USA)
+\end{tabular}
+
+
+
+\vspace{3mm}
+
+%\section{Objective}
+
+%Insert text here if you want to
+%\begin{innerlist}
+%\item More information and auxiliary documents can be found at\\\url{http://www.tedpavlic.com/facjobsearch/}
+%\end{innerlist}
+
+\section{Academic Employment}
+\emph{University of Denver, Denver, CO} \\ 
+Visiting Assistant Teaching Professor (2017-Present), Korbel School of International Studies
+
+\section{Education}
+
+Ph. D. (Defended August 2017), Political Science, \href{http://illinois.edu/}{\textbf{University of Illinois at Urbana-Champaign}}, Urbana, IL
+\begin{outerlist}
+
+\item[] \begin{innerlist}
+			\item Dissertation: \emph{What's the Point of Post-War Elections?: Power, 		Institutions, and Politics in the Wake of Civil War\\}
+%			\vspace{-3mm}
+%			\item Abstract: In the aftermath of civil war, most states conduct elections. Examinations of post-conflict elections suggest that they do not lead to peace or democracy, but these studies pay little attention to the role that rebels play in the election, specifically whether or not they participate. Using a new dataset on rebel group political participation, I examine the political outcomes of post-war elections and show that rebel groups rarely make successful transitions to political parties and when they do, their representation in government is limited. I also consider the consequences of rebel participation on human rights practices and foreign investment, attempting to see whether the inclusion of former combatants in the political arena promotes or hinders political and economic development.
+			\vspace{-3mm}
+			\item Committee Members:
+			\href{http://pauldiehl.weebly.com/}
+			{Paul F. Diehl} (co-chair), 
+			\href{http://www.pol.illinois.edu/people/xdai}
+			{Xinyuan Dai} (co-chair), 
+			\href{http://www.pol.illinois.edu/people/kuklinsk}
+			{James Kuklinski}, and
+			\href{http://www.pol.illinois.edu/people/shummel}
+			{Sarah Hummel}
+        \end{innerlist}
+
+\end{outerlist}
+\vspace{.1in}
+B.A. (2009), Political Science and History, \href{http://www.uky.edu/}{\textbf{University of Kentucky}},
+Lexington, KY
+
+\section{Research Interests}
+
+International Relations, Interstate War and Civil Conflict, Peacekeeping, Post-War Democratization and
+Development, Quantitative Methods
+
+\section{Peer-Reviewed Publications}
+\vspace{-.1275in}
+\begin{bibsection}
+	\item Xinyuan Dai and \textbf{Duu Renn}. "China and International Institutional Order: The Limits of Integration." June 2016. \emph{Journal of Chinese Political Science} 21, no.2 (2016).  
+	\\
+	- Nominated as Springer's \emph{180 Articles to Change the World from 2016.}
+	
+	\item \textbf{Duu Renn} and Paul F. Diehl. “Déjà vu All Over Again and Peacekeeping Reform?: The HIPPO Report and Barriers to Implementation” 2015. \emph{Journal of International Peacekeeping} 19, no. 3-4 (2015): 211-226. 
+	
+	\item \textbf{Duu Renn} and Paul F. Diehl. “Pay Me Now or Pay Me Later: The Tradeoffs of Peacekeeping Deployment Versus 'Letting Them Fight'” \\
+	October (2015). \emph{Peacekeeping and Stability Operations Institute Journal} 
+\end{bibsection}
+
+\section{Other Publications}
+\vspace{-.1275in}
+\begin{bibsection}
+
+	\item \textbf{Duu Renn}, Isabel Scarborough, Keith Taylor, Neil Vander-Most, and Wenshuo Zhang) "Pre-Intervention Analytical Framework. Draft Report." Army Corps of Engineers. 2011.
+\end{bibsection}
+
+\section{Working Papers}
+\vspace{-.1275in}
+\begin{bibsection}
+	
+	\item Xinyuan Dai and \textbf{Duu Renn}, "Human Rights Practices and Treaty \\*Commitment" 
+	
+	\item Duu Renn, "The Participation Gap: The Role of Ex-Belligerents in Post-Civil War Elections" 
+	
+	\item \textbf{Duu Renn} and Xinyuan Dai, "Revisiting the Kantian Tripod: Treaty Commitments and Militarized Interstate Dispute Behavior"
+	
+	\item David Bowden, Bryce Reeder, \textbf{Duu Renn} and Gina Martinez, "Safe Enough
+	to Donate? A Geospatial Approach to Examining the Effect of Conflict on Aid
+	Commitments."
+	
+\end{bibsection}
+
+\section{Research Experience}
+{Schroeder Fellow and Research Affiliate} \hfill {2016 - Present}
+\begin{innerlist}
+	
+	\item[] \href{http://www.clinecenter.illinois.edu/}{Cline Center for Democracy},	University of Illinois\\
+	Supervisors: \href{mailto: salthaus@illinois.edu}{Scott Althaus} and \href{mailto: shalmon2@illinois.edu}{Dan Shalmon}
+	\item[] Description: Data collection on civil war participants, leaders, and political parties for my dissertation using the \href{http://www.clinecenter.illinois.edu/research/globalnewsarchive/}{Global News Archive} and the \href{http://openeventdata.org/}{Open Event Data Alliance} materials. Collaborated with the Cline Center on other projects, including event data collection, data visualization, database access through R, and statistical analyses. Provided assistance to undergraduate research assistants working on a coup dataset and a project linking refugee movements and terrorist attacks. 
+\end{innerlist}
+
+\vspace{4mm}
+
+{Research Assistant} \hfill {2015; 2017}
+\begin{innerlist}
+	
+	\item[] Department of Political Science, University of Illinois\\
+	Supervisor: Xinyuan Dai
+	\item[] Description: Work on a number of research projects using the MAP dataset, including articles on human rights practices, militarized disputes, and regime type on treaty ratification. 
+\end{innerlist}
+
+\vspace{4mm}
+
+{Research Assistant} \hfill {August 2011 to May 2012}
+\begin{innerlist}
+
+\item[] Army Corps of Engineers, Construction Engineering Research Laboratory \\
+        Supervisor: Lucy A. Whalley
+        		\item[] Description: Work in multi-disciplinary group on policy-related project
+\end{innerlist}
+        	
+\vspace{4mm}
+        	
+{Research Assistant} \hfill {September 2007 to May 2010}
+\begin{innerlist}
+
+\item[] Department of Political Science, University of Kentucky\\
+        Supervisors: Daniel Morey; Clayton Thyne and Justin Wedeking
+        \item[] Description: Data collection on a variety of projects. Included dyadic event data using COPDAB and WEIS, civil war data, and Supreme Court oral arguments
+\end{innerlist}
+
+%\section{Submitted Journal Publications}
+%\vspace{-.125in}
+%\begin{bibsection}
+
+%\end{bibsection}
+
+% Add a little space to nudge next ``Conference Publications'' marginpar
+% down to make room for tall ``Submitted Journal Publications''
+% marginpar. If there are enough submitted journal publications, this
+% space will not be needed (and should be removed).
+%\vspace{0.1in}
+
+\section{Teaching Experience}
+University of Denver
+\begin{innerlist}
+\vspace{2mm}	
+	\item[] Authoritarian Regimes \hfill {Spring 2018}
+	\item[] Consequences of Civil War \hfill {Spring 2018}
+	\item[] Causes of Civil War \hfill {Spring 2018}
+	\item[] Defense Security Quantitative Analysis (Graduate Level)\hfill {Winter 2018}
+	\item[] Security and Defense Methods (Graduate Level)\hfill {Fall 2017}
+\end{innerlist}
+
+\vspace{5mm}	
+
+University of Illinois  \\
+
+\emph{Instructor} 
+\begin{innerlist}
+	\item[] Global Studies 296 -- The Consequences of Civil War \hfill {Fall 2017}
+	\item[] Political Science 230 -- Research Methods and Data Science \hfill {Spring 2016}
+	\item[] Global Studies 296 -- The Consequences of Civil War \hfill {Spring 2016} \\
+	Global Studies 296 -- The Causes of Civil War \hfill {Spring 2015}
+	\item[] Political Science 101 -- Introduction to American Politics \hfill {Summer 2014} \\
+\end{innerlist}
+
+\emph{Teaching Assistant}  
+\begin{innerlist}
+\item[] Quantitative Methods I, II, and Game Theory (Graduate Level) \hfill {Fall 2016} 
+\item[] PS 230 -- Research Methods and Data Science \hfill {Fall 2013; Fall 2014} 
+\item[] PS 495 -- Senior Honors Seminar \hfill {Fall 2013; Fall 2014; Fall 2016} 
+\item[] PS 395 -- International Organizations \hfill {Spring 2014} 
+\item[] PS 283 -- Introduction to International Security \hfill {Spring 2013} 
+\item[] PS 231 -- Strategic Models of Politics (Intro. Game Theory)\hfill {Fall 2012} 
+\item[] PS 280 -- Intro. to International Relations \hfill {AY 2010-2011} 
+	
+\end{innerlist}
+
+\section{Awards and Certifications}
+A. Belden Fields Award for Best Teaching Assistant in \hfill{AY 2015-2017}\\
+the Department of Political Science, University of Illinois
+
+\vspace{2mm}
+
+William A. Schroeder and Paul W. Schroeder Research Fellow \hfill{Summer 2016}
+
+\vspace{2mm}
+
+Teachers Ranked as Excellent \hfill{AY 2013-2014; AY 2015-2016}
+
+\vspace{2mm}
+
+Graduate Teaching Certificate \hfill {Spring 2015}
+\\
+
+% Add "change the world", law or armed conflict training; articles that; bitss training;  ACIDS research associate"
+
+\section{Service}
+Referee, \textit{International Interactions}
+
+\halfblankline
+
+Political Science Graduate Student Association (PSGSA)\\
+President \hfill {Fall 2016 - Spring 2017}
+\begin{innerlist}
+	\item Organize PSGSA government
+	\item Facilitate graduate student service to the department
+	\item Procure and manage PSGSA budget
+\end{innerlist}
+\vspace{2mm}
+Vice President \hfill {Fall 2015 - Spring 2016}
+\begin{innerlist}
+	\item Assist in coordinating PSGSA functions 
+	\item Serve as liaison between faculty and PSGSA 
+\end{innerlist}
+\halfblankline
+
+Grievance Committee \hfill {Fall 2014 - Spring 2015}
+\begin{innerlist}
+	\item Review student complaints and appeals for academic misconduct charges
+\end{innerlist}
+
+\halfblankline
+
+Graduate Academy for College Teaching  \hfill {Summer 2014}\\
+Center for Innovation in Teaching and Learning (CITL)
+\begin{innerlist}
+	\item Present pedagogical materials to incoming teaching assistants
+	\item Lead and critique micro-teaching sessions
+\end{innerlist}
+
+\section{Invited Talks}
+\vspace{-.1in}
+\begin{bibsection}
+	\item Rights Practices, Political Institutions, and Commitment to Human Rights Treaties. Paper presented at the 2016 Midwest Colloquium on International Law and International Organization, University of Notre Dame. March 2016. 
+	
+	\item Participating in Peace: The Limits of Post-Civil War Elections. Paper presented
+	at the student workshop for the Program in Arms Control, Domestic and International Security (ACDIS), University of Illinois. November 2015. 
+	
+	\item Measuring the International Institutional Order and its Effect on International Conflict. Presented at the University of Notre Dame. October 2015.
+	
+	\item Who Wins? The Effect of Post-War Election Outcomes and Stability. Presented at
+	Washington University in St. Louis. April 2014.
+	
+\end{bibsection}
+
+\section{Conference Presentations}
+\vspace{-.1in}
+\begin{bibsection}
+	\item The Consequence of Post-Civil War Elections on Human Rights Practices. Paper presented at the 2017 International Studies Association, Baltimore, MD. February 2017.
+	
+	\item The Participation Gap: The Role of Ex-Belligerents in Post- Civil War Elections. Paper presented at the 2016 Midwest International Studies Association, St. Louis, MO. November 2016. 
+	
+	\item The Participation Gap: The Role of Ex-Belligerents in Post- Civil War Elections. Poster presented at the 2016 Peace Science Conference, University of Notre Dame. October 2016. 
+	
+	\item Rights Practices, Political Institutions, and Commitment to Human Rights Treaties. Paper presented at the 2016 American Political Science Association Annual Meeting, Philadelphia, PA. September 2016. 
+
+	\item Tailor-Making International Agreements. Presented at the Annual Meeting of
+	the Midwest Political Science Association. Chicago. April 2015.
+	
+	\item Unintended Consequences? International Intervention and Government Repression
+	in Post-Civil War States. Paper presented at the Annual Meeting of
+	the Midwest Political Science Association. Chicago. April 2013.
+	
+	\item The Currency of Commitments: The Effects of Conflict Management on Foreign
+	Direct Investment in Post-Civil War States. (with David Bowden) Paper presented
+	at the Annual Meeting of the Midwest Political Science Association. Chicago. April
+	2012.
+		
+\end{bibsection}
+
+\section{Software Skills and Languages}
+\halfblankline
+
+Programming Languages and Software: R, Stata, ArcGIS, Git/Subversion, SPSS, Java, HTML,\LaTeX
+
+\halfblankline
+
+Methods: Linear Model, Maximum Likelihood, Survival/Hazard Models, Time Series, Formal Theory, Matching, Network Analysis, Instrumental Variables, Difference-in-Differences, LASSO, Natural Language Processing, Machine Learning
+
+\halfblankline
+
+Languages: English (Native), Mandarin Chinese (Intermediate)
+
+\halfblankline
+
+\section{References}
+
+Paul F. Diehl \hfill{\email{pdiehl@utdallas.edu}}
+\begin{innerlist}
+	\item[] Ashbel Smith Professor of Political Science \hfill{	972-883-3519}\\
+	Associate Provost and Director, Center for Teaching and Learning \\
+	University of Texas at Dallas
+	
+\end{innerlist}
+
+\halfblankline
+
+Xinyuan Dai \hfill{\email{xdai@illinois.edu}}
+\begin{innerlist}
+	\item[] Associate Professor of Political Science \hfill{217-333-3881}\\
+	University of Illinois
+\end{innerlist}
+
+\halfblankline
+
+James H Kuklinski \hfill{\email{kuklinsk@illinois.edu}}
+\begin{innerlist}
+	\item[]Emeritus Professor of Political Science \hfill{217-333-9589}\\
+	University of Illinois
+\end{innerlist}
+
+\halfblankline
+
+Jake Bowers \hfill{\email{jwbowers@illinois.edu}}
+\begin{innerlist}
+	\item[] Associate Professor of Political Science and Statistics \hfill{217-333-3881}\\
+	University of Illinois
+\end{innerlist}
+
+\end{document}
+

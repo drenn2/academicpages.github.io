@@ -1,6 +1,5 @@
 ---
 layout: archive
-title: "CV"
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -9,6 +8,9 @@ redirect_from:
 
 {% include base_path %}
 
+<a href="\files\renn-cv.pdf">Download CV (pdf version)</a>
+
+<!--
 Education
 ======
 * B.S. in Github, Github University, 2012
@@ -57,3 +59,4 @@ Teaching
 Service and leadership
 ======
 * Currently signed in to 43 different slack teams
+* -->
