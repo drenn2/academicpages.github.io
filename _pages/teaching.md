@@ -8,9 +8,8 @@
 
 > "You cannot just give someone a creativity injection. You have to create an environment for curiosity and a way to encourage people and get the best out of them." - Ken Robinson
 
-
-
 ## Philosophy
+The purpose of higher education is to prepare students to solve problems and make informed decisions. My courses provide students with an opportunity to learn how to do this in the context of political questions by teaching them the tools of social science. As an educator, I strive to help students learn to use these tools in the classroom so that they are also able to apply their training outside of the course. Students should also be engaged with the subject matter and seek more information about international relations outside of class. Ultimately this training will help students exercise critical thinking in a broad range of careers and encourage informed civic engagement.  
 
 
 ## Courses Taught
@@ -43,7 +42,7 @@ Student evaluations are a great opportunity to gauge effectiveness and adjust co
 
 > “Jason was a super relatable and straightforward professor. I loved most of the conversation activities that posed hypothetical situations or made other people form their opinions.” (_Causes of Civil War_, Spring 2015)  
 
-> “Jason, you are the bomb.com. You honestly are the kindest and helpful instructor I have ever had. RStudio techniques will be beneficial for my future goals.” (_Research Methods and Data Science_, Spring 2016)  
+> “You are the bomb.com. You honestly are the kindest and helpful instructor I have ever had. RStudio techniques will be beneficial for my future goals.” (_Research Methods and Data Science_, Spring 2016)  
 
 - [Research Methods and Data Science (pdf)](https://drenn2.github.io/home/files/PS_230_SPRING2016_Indep.pdf)
 - [Causes of Civil War (pdf)](https://drenn2.github.io/home/files/GLBL_296_SPRING2015(Causes of Civil War).pdf)
