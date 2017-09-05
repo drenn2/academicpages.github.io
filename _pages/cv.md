@@ -6,10 +6,7 @@ redirect_from:
   - /resume
 ---
 
-{% include base_path %}
-
-<a href="\files\renn-cv.pdf">Download CV (pdf version)</a>
-
+[Download CV (pdf)](https://drenn2.github.io/home/files/renn-cv.pdf)
 <!--
 Education
 ======
