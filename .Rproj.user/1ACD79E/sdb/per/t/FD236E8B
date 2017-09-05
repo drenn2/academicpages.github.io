@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "source \"https://rubygems.org\"\n\n# Hello! This is where you manage which Jekyll version is used to run.\n# When you want to use a different version, change it below, save the\n# file and run `bundle install`. Run Jekyll with `bundle exec`, like so:\n#\n#     bundle exec jekyll serve\n#\n# This will help ensure the proper Jekyll version is running.\n# Happy Jekylling!\n\ngem \"github-pages\", group: :jekyll_plugins\n\n# If you want to use Jekyll native, uncomment the line below.\n# To upgrade, run `bundle update`.\n\n# gem \"jekyll\"\n\ngem \"wdm\", \"~> 0.1.0\" if Gem.win_platform?\n\n# If you have any plugins, put them here!\ngroup :jekyll_plugins do\n  # gem \"jekyll-archives\"\n  gem \"jekyll-feed\"\n  gem 'jekyll-sitemap'\nend\n",
+    "created" : 1504184314014.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "178928358",
+    "id" : "FD236E8B",
+    "lastKnownWriteTime" : 1504626097,
+    "last_content_update" : 1504626097,
+    "path" : "~/Dropbox/website/home/Gemfile",
+    "project_path" : "Gemfile",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "yaml"
+}
