@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-![alttext](https://www.du.edu/korbel/sie/media/images/du_campus/nelson_hall_mountains_banner.jpg)  
+![du-view](https://www.du.edu/korbel/sie/media/images/du_campus/nelson_hall_mountains_banner.jpg)  
 
 Hello, I am Jason Renn.* This is my academic website, where you can find details about my research, teaching, and other projects.   
 

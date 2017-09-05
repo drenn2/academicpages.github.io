@@ -5,7 +5,10 @@
   redirect_from:
     - /teaching
 ---
-blurb -- have teaching packet link
+
+> "You cannot just give someone a creativity injection. You have to create an environment for curiosity and a way to encourage people and get the best out of them." - Ken Robinson
+
+
 
 ## Philosophy
 
