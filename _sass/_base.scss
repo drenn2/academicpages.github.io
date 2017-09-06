@@ -106,15 +106,13 @@ blockquote {
 /* links */
 
 a {
-  &:focus {
-    @extend %tab-focus;
+  color: $blue;
+  text-decoration: none;
+    cursor: pointer;
+  &:hover, &:active {
+    color: $blue;
   }
-
-  &:hover,
-  &:active {
-    outline: 0;
-  }
-}
+{
 
 /* code */
 
