@@ -21,7 +21,7 @@ The purpose of higher education is to prepare students to solve problems and mak
 - Defense Security Quantitative Analysis (_scheduled_, Graduate Level)
 - Defense Security Methods (Graduate Level)
   * [syllabus](https://drenn2.github.io/home/files/syllabus-dsm-fall2017-html.html)
-  * [sample exercise](https://drenn2.github.io/home/files/1-data-management-venezuela.html))
+  * [sample exercise](https://drenn2.github.io/home/files/1-data-management-venezuela.html)
 
 #### University of Illinois 
 _Instructor_  
