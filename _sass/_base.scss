@@ -105,14 +105,14 @@ blockquote {
 
 /* links */
 a {
-  color: #ADD8E6;
+  color: #001f3f;
   &:focus {
     @extend %tab-focus;
   }
 
   &:hover,
   &:active {
-    color: #ADD8E6;
+    color: #001f3f;
   }
 }
 
