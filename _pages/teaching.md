@@ -13,16 +13,20 @@ The purpose of higher education is to prepare students to solve problems and mak
 
 
 ## Courses Taught
-### University of Denver  
+#### University of Denver  
 - Authoritarian Regimes 
 - Consequences of Civil War (_scheduled_)
-- Causes of Civil War (_scheduled_, [syllabus](https://drenn2.github.io/home/files/syllabus-causescs-fall2017.pdf))
+- Causes of Civil War (_scheduled_)
+  * [syllabus](https://drenn2.github.io/home/files/syllabus-causescs-fall2017.pdf)
 - Defense Security Quantitative Analysis (_scheduled_, Graduate Level)
-- Defense Security Methods (Graduate Level, [syllabus](https://drenn2.github.io/home/files/syllabus-dsm-fall2017-html.html), [sample exercise](https://drenn2.github.io/home/files/1-data-management-venezuela.html))
+- Defense Security Methods (Graduate Level)
+  * [syllabus](https://drenn2.github.io/home/files/syllabus-dsm-fall2017-html.html)
+  * [sample exercise](https://drenn2.github.io/home/files/1-data-management-venezuela.html))
 
-### University of Illinois 
+#### University of Illinois 
 _Instructor_  
-- The Consequence of Civil War ([syllabus](https://drenn2.github.io/home/files/GLBL296_Syllabus_Spring2017.pdf))
+- The Consequence of Civil War 
+  * [syllabus](https://drenn2.github.io/home/files/GLBL296_Syllabus_Spring2017.pdf)
 - Political Science Research Methods and Data Science
 - The Causes of Civil War 
 - Introduction to American Government
