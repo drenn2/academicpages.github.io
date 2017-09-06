@@ -46,7 +46,7 @@ Student evaluations are a great opportunity to gauge effectiveness and adjust co
 
 > “Jason was a super relatable and straightforward professor. I loved most of the conversation activities that posed hypothetical situations or made other people form their opinions.” (_Causes of Civil War_, Spring 2015)  
 
-> “You are the bomb.com. You honestly are the kindest and helpful instructor I have ever had. RStudio techniques will be beneficial for my future goals.” (_Research Methods and Data Science_, Spring 2016)  
+> “You are the bomb.com. You honestly are the kindest and most helpful instructor I have ever had. RStudio techniques will be beneficial for my future goals.” (_Research Methods and Data Science_, Spring 2016)  
 
 - [Research Methods and Data Science (pdf)](https://drenn2.github.io/home/files/PS_230_SPRING2016_Indep.pdf)
 - [Causes of Civil War (pdf)](https://drenn2.github.io/home/files/GLBL_296_SPRING2015(Causes of Civil War).pdf)
