@@ -14,7 +14,7 @@ The purpose of higher education is to prepare students to solve problems and mak
 
 ## Courses Taught
 ### University of Denver  
-- Authoritarian Regimes 
+- Authoritarianism and Democratization (_scheduled_) 
 - Consequences of Civil War (_scheduled_)
 - Causes of Civil War (_scheduled_)
   * [syllabus (pdf)](https://drenn2.github.io/home/files/syllabus-causescw-spring2018.pdf)
