@@ -13,7 +13,7 @@ The purpose of higher education is to prepare students to solve problems and mak
 
 
 ## Courses Taught
-#### University of Denver  
+### University of Denver  
 - Authoritarian Regimes 
 - Consequences of Civil War (_scheduled_)
 - Causes of Civil War (_scheduled_)
@@ -22,8 +22,9 @@ The purpose of higher education is to prepare students to solve problems and mak
 - Defense Security Methods (Graduate Level)
   * [syllabus (html)](https://drenn2.github.io/home/files/syllabus-dsm-fall2017-html.html)
   * [sample exercise (html)](https://drenn2.github.io/home/files/1-data-management-venezuela.html)
-
-#### University of Illinois 
+  
+   
+### University of Illinois 
 _Instructor_  
 - The Consequence of Civil War 
   * [syllabus (pdf)](https://drenn2.github.io/home/files/GLBL296_Syllabus_Spring2017.pdf)
@@ -42,11 +43,12 @@ _Teaching Assistant_
 - Introduction to International Relations 
 
 ## Evaluations
-Student evaluations are a great opportunity to gauge effectiveness and adjust course content. They can also be really fun reading. I've included a few of these fun quotes below and links to my course evaluations for several recent solo-taught courses.  
 
 > “Jason was a super relatable and straightforward professor. I loved most of the conversation activities that posed hypothetical situations or made other people form their opinions.” (_Causes of Civil War_, Spring 2015)  
 
 > “You are the bomb.com. You honestly are the kindest and most helpful instructor I have ever had. RStudio techniques will be beneficial for my future goals.” (_Research Methods and Data Science_, Spring 2016)  
+
+Student evaluations are a great opportunity to gauge effectiveness and adjust course content. They can also be really fun reading. I've included a few of these fun quotes below and links to my course evaluations for several recent solo-taught courses at the University of Illinois.  
 
 - [Research Methods and Data Science (pdf)](https://drenn2.github.io/home/files/PS_230_SPRING2016_Indep.pdf)
 - [Causes of Civil War (pdf)](https://drenn2.github.io/home/files/GLBL_296_SPRING2015(Causes of Civil War).pdf)
