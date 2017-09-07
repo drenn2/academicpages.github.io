@@ -17,16 +17,16 @@ The purpose of higher education is to prepare students to solve problems and mak
 - Authoritarian Regimes 
 - Consequences of Civil War (_scheduled_)
 - Causes of Civil War (_scheduled_)
-  * [syllabus](https://drenn2.github.io/home/files/syllabus-causescw-spring2018.pdf)
+  * [syllabus (pdf)](https://drenn2.github.io/home/files/syllabus-causescw-spring2018.pdf)
 - Defense Security Quantitative Analysis (_scheduled_, Graduate Level)
 - Defense Security Methods (Graduate Level)
-  * [syllabus](https://drenn2.github.io/home/files/syllabus-dsm-fall2017-html.html)
-  * [sample exercise](https://drenn2.github.io/home/files/1-data-management-venezuela.html)
+  * [syllabus (html)](https://drenn2.github.io/home/files/syllabus-dsm-fall2017-html.html)
+  * [sample exercise (html)](https://drenn2.github.io/home/files/1-data-management-venezuela.html)
 
 #### University of Illinois 
 _Instructor_  
 - The Consequence of Civil War 
-  * [syllabus](https://drenn2.github.io/home/files/GLBL296_Syllabus_Spring2017.pdf)
+  * [syllabus (pdf)](https://drenn2.github.io/home/files/GLBL296_Syllabus_Spring2017.pdf)
 - Political Science Research Methods and Data Science
 - The Causes of Civil War 
 - Introduction to American Government
