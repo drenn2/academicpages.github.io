@@ -48,7 +48,7 @@ _Teaching Assistant_
 
 > “You are the bomb.com. You honestly are the kindest and most helpful instructor I have ever had. RStudio techniques will be beneficial for my future goals.” (_Research Methods and Data Science_, Spring 2016)  
 
-Student evaluations are a great opportunity to gauge effectiveness and adjust course content. They can also be really fun reading. I've included a few of these fun quotes below and links to my course evaluations for several recent solo-taught courses at the University of Illinois.  
+Student evaluations are a great opportunity to gauge effectiveness and adjust course content. They can also be really fun reading. I've included a few of these fun quotes above and links to my course evaluations for several recent solo-taught courses at the University of Illinois.  
 
 - [Research Methods and Data Science (pdf)](https://drenn2.github.io/home/files/PS_230_SPRING2016_Indep.pdf)
 - [Causes of Civil War (pdf)](https://drenn2.github.io/home/files/GLBL_296_SPRING2015(Causes of Civil War).pdf)
