@@ -27,7 +27,7 @@ The purpose of higher education is to prepare students to solve problems and mak
    
 ### University of Illinois 
 _Instructor_  
-- The Consequence of Civil War 
+- The Consequences of Civil War 
   * [syllabus (pdf)](https://drenn2.github.io/home/files/GLBL296_Syllabus_Spring2017.pdf)
 - Political Science Research Methods and Data Science
 - The Causes of Civil War 
