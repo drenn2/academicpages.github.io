@@ -14,9 +14,10 @@ The purpose of higher education is to prepare students to solve problems and mak
 
 ## Courses Taught
 ### University of Denver  
-- Authoritarianism and Democratization (_scheduled_) 
-- Consequences of Civil War (_scheduled_)
-- Causes of Civil War (_scheduled_)
+- Introduction to Data Science
+  * [sample student work](https://drenn2.github.io/home/files/Updated.Bee.Project.nb.html)
+- Consequences of Civil War 
+- Causes of Civil War 
   * [syllabus (pdf)](https://drenn2.github.io/home/files/syllabus-causescw-spring2018.pdf)
 - Defense Security Quantitative Analysis (_scheduled_, Graduate Level)
 - Defense Security Methods (Graduate Level)
